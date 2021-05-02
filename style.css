@@ -144,7 +144,7 @@ body {
   font-size: 15px;
 }
 .todolist ul li div button:hover {
-  background: #d3d3d3;
+  background: #bebebe;
 }
 ::-webkit-scrollbar {
   display: none;
