@@ -7,7 +7,12 @@ const API_KEY = "aa7fa39ae5f67ec2fe730259d255a76d";
 const COORDS = "coords";
 
 function getWeather(lat, lon) {
-  fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`)
+  if (location.protocol === "http:") {
+    url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+  } else {
+    url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+  }
+  fetch(url)
     .then(function (response) {
       return response.json();
     })
