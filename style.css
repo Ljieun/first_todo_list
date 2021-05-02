@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+  background: black;
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadeIn 1s linear;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+/* FIRST-MEET SECTION */
+.first-meet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 4em;
+  color: whitesmoke;
+  text-align: center;
+}
+.first-meet input {
+  width: 500px;
+  height: 60px;
+  font-size: 42px;
+  text-align: center;
+  border: none;
+  border-bottom: solid 2px whitesmoke;
+  background-color: transparent;
+  outline: none;
+  color: whitesmoke;
+}
+
+/* TODOLIST SECTION */
+.todolist {
+  display: flex;
+  flex-direction: column;
+  color: whitesmoke;
+  background: rgba(0, 0, 0, 0.315);
+  width: 100vw;
+  height: 100%;
+}
+.todolist form {
+  display: flex;
+  justify-content: center;
+  margin: 0 30px;
+}
+.todolist input {
+  width: 420px;
+  height: 40px;
+  margin: 30px 0;
+  font-size: 20px;
+  text-align: center;
+  outline: none;
+  border: 2px solid gray;
+  border-radius: 10px;
+}
+.todolist input:focus {
+  border: 2px solid #000;
+}
+.todolist input::placeholder {
+  color: rgb(204, 204, 204);
+}
+.todolist .list {
+  display: flex;
+  height: 100%;
+  overflow-y: hidden;
+}
+.todolist .list-pending {
+  position: relative;
+  width: 50%;
+  height: 95%;
+  padding: 0 20px;
+  border-right: solid 1px whitesmoke;
+}
+.todolist .list-inner {
+  overflow-y: auto;
+  height: 80%;
+}
+.todolist .list-finished {
+  position: relative;
+  width: 50%;
+  height: 95%;
+  padding: 0 20px;
+}
+.todolist .gradient {
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  bottom: -30px;
+  left: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  pointer-events: none;
+}
+.todolist h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.todolist ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  font-size: 20px;
+  min-height: 40px;
+  height: auto;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  color: #000;
+}
+.todolist ul li span {
+  padding-left: 10px;
+  word-break: break-all;
+}
+.todolist ul li div {
+  min-width: fit-content;
+}
+.todolist ul li div button {
+  margin-right: 5px;
+  border: none;
+  background: transparent;
+  font-size: 15px;
+}
+.todolist ul li div button:hover {
+  background: #d3d3d3;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* INTRO SECTION */
+.intro {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: whitesmoke;
+}
+.intro .clock {
+  display: flex;
+  font-size: 100px;
+  font-weight: bold;
+}
+.intro .clock .clock-date {
+  position: relative;
+  min-width: 450px;
+  padding-left: 40px;
+}
+.intro .clock .date {
+  position: absolute;
+  left: 45px;
+  top: 0;
+  font-size: 18px;
+  font-weight: 400;
+}
+.intro .clock-switch {
+  position: relative;
+  width: 30px;
+  height: 16px;
+}
+.intro .clock-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.intro .clock-switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.intro .clock-switch .slider::before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.intro .clock-switch input:checked + .slider {
+  background-color: #2196f3;
+}
+.intro .clock-switch input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+.intro .clock-switch input:checked + .slider::before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+.intro .clock-switch .slider.round {
+  border-radius: 34px;
+}
+.intro .clock-switch .slider.round::before {
+  border-radius: 50%;
+}
+.intro .greeting {
+  font-size: 38px;
+}
+
+/* WEATHER SECTION */
+.weather {
+  position: absolute;
+  right: 0;
+}
+.weather .weather-box {
+  background: rgba(245, 245, 245, 0.555);
+  width: 220px;
+  height: 100px;
+  padding: 20px 20px 10px 10px;
+  border-radius: 0px 0px 0px 10px;
+}
+.weather .weather-box .place {
+  padding-left: 3px;
+}
+.weather .weather-box .temperature {
+  display: inline-block;
+  font-size: 30px;
+}
+.weather .weather-box .nowWeather {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .todolist {
+    width: 50vw;
+    min-width: 280px;
+  }
+  .todolist input {
+    margin: 20px 0;
+  }
+  .todolist .list {
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+  }
+  .todolist .list .list-scroll {
+    height: 100%;
+  }
+  .todolist .list .list-pending {
+    border-right: none;
+    width: 100%;
+    overflow-y: hidden;
+  }
+  .todolist .list .list-finished {
+    width: 100%;
+    overflow-y: hidden;
+  }
+  .todolist .list .list-finished h2 {
+    border-top: solid 1px whitesmoke;
+  }
+  .todolist .list-inner {
+    overflow-y: auto;
+    height: 70%;
+  }
+  .todolist .gradient {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0));
+    pointer-events: none;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  body {
+    filter: blur(6px);
+    pointer-events: none;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.hidden {
+  display: none;
+}
