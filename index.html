@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo List</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <img src="" class="bgImage" />
+    <header></header>
+    <div class="first-meet">
+      <div>What is your name?</div>
+      <form>
+        <input type="text" spellcheck="false" />
+      </form>
+    </div>
+    <div class="container hidden">
+      <section class="todolist">
+        <form class="js-todoForm">
+          <input type="text" placeholder="Add task" />
+        </form>
+        <div class="list">
+          <div class="list-pending">
+            <h2>Pending</h2>
+            <div class="list-inner">
+              <ul class="js-pending-list"></ul>
+            </div>
+            <div class="gradient"></div>
+          </div>
+          <div class="list-finished">
+            <h2>Finished</h2>
+            <div class="list-inner">
+              <ul class="js-finished-list"></ul>
+            </div>
+            <div class="gradient"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro">
+        <div class="clock">
+          <div class="clock-date">
+            <div class="date"></div>
+            <div class="timer"></div>
+          </div>
+          <label class="clock-switch">
+            <input type="checkbox" class="hidden" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="greeting">Hello <span class="username"></span>!</div>
+      </section>
+
+      <section class="weather">
+        <div class="weather-box">
+          <div class="place"></div>
+          <div class="temperature"></div>
+          <div class="nowWeather"></div>
+        </div>
+      </section>
+    </div>
+    <script src="js/gretting.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/todolist.js"></script>
+    <script src="js/bg.js"></script>
+    <script src="js/weather.js"></script>
+  </body>
+</html>
