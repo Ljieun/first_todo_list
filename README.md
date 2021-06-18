@@ -1,3 +1,3 @@
-# first_todo_list
+# VallinaJS-Todolist
 
 <https://lemam.github.io/VallinaJS-Todolist/>
